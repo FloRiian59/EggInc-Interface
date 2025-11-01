@@ -1,0 +1,81 @@
+.boost-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  max-width: 400px;
+  border-radius: 15px;
+  margin: 0 auto;
+  background: #bfbfbf;
+  font-family: "Anita";
+  letter-spacing: 1.5px;
+}
+
+.boost-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.boost-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.boost-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.boost-name {
+  margin: 0;
+  font-size: 16px;
+}
+
+.boost-desc {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #1e84dd;
+}
+
+.boost-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  font-weight: bold;
+  color: #fff;
+  background-color: #8700c4;
+  border-radius: 8px;
+  padding: 5px 20px;
+  white-space: nowrap;
+  margin-right: 5px;
+  min-width: 40px;
+  max-width: 40px;
+  cursor: pointer;
+}
+
+.boost-price:hover {
+  background-color: #9401d8;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.price-logo {
+  width: 10px;
+}

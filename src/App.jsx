@@ -1,7 +1,9 @@
+import BoostList from "./components/BoostList";
+import "./App.css";
 function App() {
   return (
     <div>
-      <h1>Mon jeu React 🎮</h1>
+      <BoostList />
     </div>
   );
 }
