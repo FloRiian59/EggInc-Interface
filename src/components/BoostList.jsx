@@ -23,7 +23,7 @@ const BoostList = () => {
             <p className="boost-desc">{formatDescription(boost.desc)}</p>
           </div>
           <div className="boost-price">
-            <span>buy</span>{" "}
+            <span>buy</span>
             <div className="price-container">
               <img
                 src="../../public/assets/Eggs/GoldenEgg.png"

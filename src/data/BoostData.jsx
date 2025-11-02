@@ -93,7 +93,7 @@ const BoostData = [
     name: "Epic Boost Beacon",
     img: "../../public/assets/Boost/Epic_Boost_Beacon.png",
     desc: "10x all active boosts for 10min",
-    price: "8;000",
+    price: "8,000",
   },
   {
     name: "Large Boost Beacon",

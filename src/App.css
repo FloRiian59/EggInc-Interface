@@ -2,3 +2,9 @@
   font-family: "Anita";
   src: url("../public/assets/Font/AnitypeRedwood-1.otf");
 }
+
+.list-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}

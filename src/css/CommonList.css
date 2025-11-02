@@ -1,0 +1,167 @@
+.upgrade-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  max-width: 400px;
+  border-radius: 15px;
+  margin: 0 auto;
+  background: #266ec6;
+  font-family: "Anita";
+  letter-spacing: 1.5px;
+}
+
+.upgrade-item {
+  display: flex;
+  align-items: end;
+  gap: 5px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  padding: 5px 0px;
+}
+
+.upgrade-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.upgrade-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.upgrade-name {
+  margin: 0;
+  font-size: 16px;
+}
+
+.upgrade-desc {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #1e84dd;
+  font-weight: bold;
+}
+
+.upgrade-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  color: #fff;
+  background-color: #19ad00;
+  border-radius: 8px;
+  padding: 5px 20px;
+  white-space: nowrap;
+  margin-right: 5px;
+  min-width: 40px;
+  max-width: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.upgrade-price:hover {
+  background-color: #2acb0e;
+}
+
+.upgrade-price:active {
+  background-color: #158a00;
+  transform: scale(0.98);
+}
+
+.upgrade-price-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2px;
+}
+.upgrade-price-logo {
+  transform: rotate(90deg);
+  width: 35%;
+}
+
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.progress-bar-background {
+  flex: 1;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 25px;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.progression {
+  font-size: 12px;
+  color: #1e84dd;
+  min-width: 50px;
+}
+
+.upgrade-completed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  white-space: nowrap;
+  min-width: 80px;
+  height: 48px;
+  cursor: default;
+  user-select: none;
+  margin-right: 5px;
+  transform: translateY(-5px);
+}
+
+.complete-square {
+  display: flex;
+  justify-content: center;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border: 2px solid black;
+  color: green;
+  font-size: 16px;
+  font-weight: bold;
+  align-items: flex-end;
+}
+
+.complete-square span {
+  transform: translate(2px, 3px);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.upgrade-price:active {
+  animation: pulse 0.2s ease;
+}
