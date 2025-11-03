@@ -11,13 +11,40 @@
   letter-spacing: 1.5px;
 }
 
+.tier-title {
+  margin: 0 0 5px 5px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.tier-upgrades {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.upgrade-item-li {
+  padding: 0;
+  margin: 0;
+}
+
 .upgrade-item {
   display: flex;
   align-items: end;
   gap: 5px;
-  border-radius: 8px;
+  border-radius: 12px;
   background-color: #f9f9f9;
   padding: 5px 0px;
+}
+
+.upgrade-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .upgrade-image {
@@ -25,6 +52,27 @@
   height: 60px;
   object-fit: contain;
   flex-shrink: 0;
+}
+
+.upgrade-quantity {
+  display: flex;
+  align-items: center;
+  transform: translate(0px);
+  margin: 0;
+  background-color: #266ec6;
+  border-radius: 25px;
+  padding: 0 5px;
+  font-size: 12px;
+  color: white;
+}
+
+.upgrade-quantity--zero {
+  background-color: gray;
+}
+
+.upgrade-quantity span {
+  font-size: 8px;
+  margin: 0;
 }
 
 .upgrade-info {
@@ -164,4 +212,32 @@
 
 .upgrade-price:active {
   animation: pulse 0.2s ease;
+}
+
+.upgrade-list.epic,
+.upgrade-price.epic,
+.upgrade-quantity.epic {
+  background-color: #8600c3;
+}
+
+.progression.epic {
+  color: #8600c3;
+}
+
+.upgrade-price.epic:hover {
+  background-color: #9f07e5;
+}
+
+.upgrade-price.epic:active {
+  background-color: #7408a6;
+}
+
+.highlight.epic {
+  color: #8600c3;
+}
+
+.upgrade-price-logo.epic {
+  transform: rotate(0deg);
+  width: 25%;
+  margin-right: 2px;
 }

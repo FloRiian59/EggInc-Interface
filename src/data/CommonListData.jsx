@@ -1,5 +1,6 @@
 const CommonListData = [
   {
+    tier: "1",
     name: "Comfortable Nests",
     img: "../../public/assets/Research/Common/ComfortableNests.png",
     desc: "Increase egg laying rate by 10%",
@@ -8,6 +9,7 @@ const CommonListData = [
     totalCost: "7.328e6",
   },
   {
+    tier: "1",
     name: "Nutritional Supplements",
     img: "../../public/assets/Research/Common/NutritionalSupplements.png",
     desc: "Increase egg value by 25%",
@@ -16,6 +18,7 @@ const CommonListData = [
     totalCost: "6.5488e7",
   },
   {
+    tier: "1",
     name: "Better Incubators",
     img: "../../public/assets/Research/Common/BetterIncubators.png",
     desc: "Hatchery will refill 10% faster",
@@ -24,6 +27,7 @@ const CommonListData = [
     totalCost: "3.0038e4",
   },
   {
+    tier: "1",
     name: "Excitable Chickens",
     img: "../../public/assets/Research/Common/ExcitableChickens.png",
     desc: "+0.1% egg value bonus for each running chicken",
@@ -32,6 +36,7 @@ const CommonListData = [
     totalCost: "5.77506e11",
   },
   {
+    tier: "2",
     name: "Hen House Remodel",
     img: "../../public/assets/Research/Common/HenHouseRemodel.png",
     desc: "Increase capacity of all habs by 5%",
@@ -40,6 +45,7 @@ const CommonListData = [
     totalCost: "1.38928e5",
   },
   {
+    tier: "2",
     name: "Internal Hatcheries",
     img: "../../public/assets/Research/Common/InternalHatcheries.png",
     desc: "Each hen house adds 2 additional chickens per minute",
@@ -48,6 +54,7 @@ const CommonListData = [
     totalCost: "3.30326e8",
   },
   {
+    tier: "2",
     name: "Padded Packaging",
     img: "../../public/assets/Research/Common/PaddedPackaging.png",
     desc: "Increases earnings per egg by 25%",
@@ -56,6 +63,7 @@ const CommonListData = [
     totalCost: "3.554e10",
   },
   {
+    tier: "2",
     name: "Hatchery Expansion",
     img: "../../public/assets/Research/Common/HatcheryExpansion.png",
     desc: "Increases Hatchery capacity by 10",
@@ -64,6 +72,7 @@ const CommonListData = [
     totalCost: "6.4794e7",
   },
   {
+    tier: "2",
     name: "Bigger Eggs",
     img: "../../public/assets/Research/Common/BiggerEggs.png",
     desc: "DOUBLES egg value",
@@ -72,6 +81,7 @@ const CommonListData = [
     totalCost: "1.352e6",
   },
   {
+    tier: "3",
     name: "Internal Hatchery Upgrades",
     img: "../../public/assets/Research/Common/InternalHatcheryUpgrades.png",
     desc: "Each hen house adds an additional 5 chickens/min",
@@ -80,6 +90,7 @@ const CommonListData = [
     totalCost: "8.6176e13",
   },
   {
+    tier: "3",
     name: "Improved Leafsprings",
     img: "../../public/assets/Research/Common/ImprovedLeafsprings.png",
     desc: "Increase vehicle capacity by 5%",
@@ -88,6 +99,7 @@ const CommonListData = [
     totalCost: "5.472e12",
   },
   {
+    tier: "3",
     name: "Vehicle Reliability",
     img: "../../public/assets/Research/Common/VehicleReliability.png",
     desc: "Increase fleet size by 1",
@@ -96,6 +108,7 @@ const CommonListData = [
     totalCost: "2.6456e13",
   },
   {
+    tier: "3",
     name: "Rooster Booster",
     img: "../../public/assets/Research/Common/RoosterBooster.png",
     desc: "Hatchery will 'refill' 5% faster",
@@ -104,6 +117,7 @@ const CommonListData = [
     totalCost: "2.41246e14",
   },
   {
+    tier: "3",
     name: "Coordinated Clucking",
     img: "../../public/assets/Research/Common/CoordinatedClucking.png",
     desc: "Max running chicken bonus increased by 0.2x",
@@ -112,6 +126,7 @@ const CommonListData = [
     totalCost: "6.7626e13",
   },
   {
+    tier: "4",
     name: "Hatchery Rebuild",
     img: "../../public/assets/Research/Common/HatcheryRebuild.png",
     desc: "Increases Hatchery capacity by 50",
@@ -120,6 +135,7 @@ const CommonListData = [
     totalCost: "1.86912e11",
   },
   {
+    tier: "4",
     name: "USDE Prime Certification",
     img: "../../public/assets/Research/Common/USDEPrimeCertification.png",
     desc: "TRIPLES egg value",
@@ -128,6 +144,7 @@ const CommonListData = [
     totalCost: "3.2318e13",
   },
   {
+    tier: "4",
     name: "Hen House A/C",
     img: "../../public/assets/Research/Common/HenHouseAC.png",
     desc: "Increase egg laying rate by 5%",
@@ -136,6 +153,7 @@ const CommonListData = [
     totalCost: "2.93e13",
   },
   {
+    tier: "4",
     name: "Super-Feed™ Diet",
     img: "../../public/assets/Research/Common/Super-FeedDiet.png",
     desc: "Increase egg value by 25%",
@@ -144,6 +162,7 @@ const CommonListData = [
     totalCost: "1.51308e14",
   },
   {
+    tier: "4",
     name: "Microlux™ Chicken Suites",
     img: "../../public/assets/Research/Common/MicroluxChickenSuites.png",
     desc: "Increase capacity of all habs by 5%",
@@ -152,6 +171,7 @@ const CommonListData = [
     totalCost: "4.662e12",
   },
   {
+    tier: "5",
     name: "Compact Incubators",
     img: "../../public/assets/Research/Common/CompactIncubators.png",
     desc: "Increases Hatchery capacity by 10",
@@ -160,6 +180,7 @@ const CommonListData = [
     totalCost: "4.5586e16",
   },
   {
+    tier: "5",
     name: "Lightweight Boxes",
     img: "../../public/assets/Research/Common/LightweightBoxes.png",
     desc: "Increase vehicle capacity by 10%",
@@ -168,6 +189,7 @@ const CommonListData = [
     totalCost: "1.189e18",
   },
   {
+    tier: "5",
     name: "Depot Worker Exoskeletons",
     img: "../../public/assets/Research/Common/DepotWorkerExoskeletons.png",
     desc: "Increase maximum fleet size by 1",
@@ -176,6 +198,7 @@ const CommonListData = [
     totalCost: "6.93226e17",
   },
   {
+    tier: "5",
     name: "Internal Hatchery Expansion",
     img: "../../public/assets/Research/Common/InternalHatcheryExpansion.png",
     desc: "Each hen house adds an additional 10 chickens/min",
@@ -184,6 +207,7 @@ const CommonListData = [
     totalCost: "3.674e18",
   },
   {
+    tier: "5",
     name: "Improved Genetics",
     img: "../../public/assets/Research/Common/ImprovedGenetics.png",
     desc: "Increase egg laying rate AND egg value by 15%",
@@ -192,6 +216,7 @@ const CommonListData = [
     totalCost: "1.049e18",
   },
   {
+    tier: "6",
     name: "Traffic Management",
     img: "../../public/assets/Research/Common/TrafficManagement.png",
     desc: "Increase vehicle fleet size by 1",
@@ -200,6 +225,7 @@ const CommonListData = [
     totalCost: "1.34438e17",
   },
   {
+    tier: "6",
     name: "Motivational Clucking",
     img: "../../public/assets/Research/Common/MotivationalClucking.png",
     desc: "Max running chicken bonus increased by 0.5x",
@@ -208,6 +234,7 @@ const CommonListData = [
     totalCost: "1.4207e24",
   },
   {
+    tier: "6",
     name: "Driver Training",
     img: "../../public/assets/Research/Common/DriverTraining.png",
     desc: "Increase vehicle speed by 5%",
@@ -216,6 +243,7 @@ const CommonListData = [
     totalCost: "1.507e21",
   },
   {
+    tier: "6",
     name: "Shell Fortification",
     img: "../../public/assets/Research/Common/ShellFortification.png",
     desc: "Increase egg value by 15%",
@@ -224,6 +252,7 @@ const CommonListData = [
     totalCost: "1.507e21",
   },
   {
+    tier: "7",
     name: "Egg Loading Bots",
     img: "../../public/assets/Research/Common/EggLoadingBots.png",
     desc: "Increase fleet size by 1",
@@ -232,6 +261,7 @@ const CommonListData = [
     totalCost: "9.043e23",
   },
   {
+    tier: "7",
     name: "Super Alloy Frames",
     img: "../../public/assets/Research/Common/SuperAlloyFrames.png",
     desc: "Increase vehicle capacity by 5%",
@@ -240,6 +270,7 @@ const CommonListData = [
     totalCost: "2.61066e24",
   },
   {
+    tier: "7",
     name: "Even Bigger Eggs",
     img: "../../public/assets/Research/Common/EvenBiggerEggs.png",
     desc: "DOUBLES egg value",
@@ -248,6 +279,7 @@ const CommonListData = [
     totalCost: "1.683e27",
   },
   {
+    tier: "7",
     name: "Internal Hatchery Expansion",
     img: "../../public/assets/Research/Common/InternalHatcheryExpansion2.png",
     desc: "Each hen house adds an additional 25 chickens/min",
@@ -256,6 +288,7 @@ const CommonListData = [
     totalCost: "2.364e27",
   },
   {
+    tier: "8",
     name: "Quantum Egg Storage",
     img: "../../public/assets/Research/Common/QuantumEggStorage.png",
     desc: "Increase vehicle capacity by 5%",
@@ -264,6 +297,7 @@ const CommonListData = [
     totalCost: "7.848e33",
   },
   {
+    tier: "8",
     name: "Genetic Purification",
     img: "../../public/assets/Research/Common/GeneticPurification.png",
     desc: "Increases egg value by 10%",
@@ -272,6 +306,7 @@ const CommonListData = [
     totalCost: "3.90392e35",
   },
   {
+    tier: "8",
     name: "Machine Learning Incubators",
     img: "../../public/assets/Research/Common/MachineLearningIncubators.png",
     desc: "Each hen house adds an additional 5 chickens/min",
@@ -280,6 +315,7 @@ const CommonListData = [
     totalCost: "1.7482e35",
   },
   {
+    tier: "8",
     name: "Time Compression",
     img: "../../public/assets/Research/Common/TimeCompression.png",
     desc: "Increase egg laying rate by 10%",
@@ -288,6 +324,7 @@ const CommonListData = [
     totalCost: "5.62402e31",
   },
   {
+    tier: "9",
     name: "Hover Upgrades",
     img: "../../public/assets/Research/Common/HoverUpgrades.png",
     desc: "Increase hover vehicle capacity by 5%",
@@ -296,6 +333,7 @@ const CommonListData = [
     totalCost: "2.4518e34",
   },
   {
+    tier: "9",
     name: "Graviton Coating",
     img: "../../public/assets/Research/Common/GravitonCoating.png",
     desc: "DOUBLES egg density and thus egg value",
@@ -304,6 +342,7 @@ const CommonListData = [
     totalCost: "3.4074e37",
   },
   {
+    tier: "9",
     name: "Grav Plating",
     img: "../../public/assets/Research/Common/GravPlating.png",
     desc: "Increase capacity of all habs by 2%",
@@ -312,6 +351,7 @@ const CommonListData = [
     totalCost: "1.6698e34",
   },
   {
+    tier: "9",
     name: "Crystalline Shelling",
     img: "../../public/assets/Research/Common/CrystallineShelling.png",
     desc: "Increases egg value by 25%",
@@ -320,6 +360,7 @@ const CommonListData = [
     totalCost: "8.136e34",
   },
   {
+    tier: "10",
     name: "Autonomous Vehicles",
     img: "../../public/assets/Research/Common/AutonomousVehicles.png",
     desc: "Increase fleet size by 1",
@@ -328,6 +369,7 @@ const CommonListData = [
     totalCost: "6.0268e34",
   },
   {
+    tier: "10",
     name: "Neural Linking",
     img: "../../public/assets/Research/Common/NeuralLinking.png",
     desc: "Each hen house adds an additional 50 chickens/min",
@@ -336,6 +378,7 @@ const CommonListData = [
     totalCost: "7.828e45",
   },
   {
+    tier: "10",
     name: "Telepathic Will",
     img: "../../public/assets/Research/Common/TelepathicWill.png",
     desc: "Increase egg quality (value) by 25%",
@@ -344,6 +387,7 @@ const CommonListData = [
     totalCost: "2.5508e46",
   },
   {
+    tier: "10",
     name: "Enlightened Chickens",
     img: "../../public/assets/Research/Common/EnlightenedChickens.png",
     desc: "Increase max running chicken bonus by 2.0x!",
@@ -352,6 +396,7 @@ const CommonListData = [
     totalCost: "1.433e48",
   },
   {
+    tier: "11",
     name: "Dark Containment",
     img: "../../public/assets/Research/Common/DarkContainment.png",
     desc: "Increase vehicle capacity by 5%",
@@ -360,6 +405,7 @@ const CommonListData = [
     totalCost: "1.254e51",
   },
   {
+    tier: "11",
     name: "Atomic Purification",
     img: "../../public/assets/Research/Common/AtomicPurification.png",
     desc: "Increase egg value by 10%",
@@ -368,6 +414,7 @@ const CommonListData = [
     totalCost: "1.23094e54",
   },
   {
+    tier: "11",
     name: "Multiversal Layering",
     img: "../../public/assets/Research/Common/MultiversalLayering.png",
     desc: "10x egg value",
@@ -376,6 +423,7 @@ const CommonListData = [
     totalCost: "3.514e48",
   },
   {
+    tier: "11",
     name: "Timeline Diversion",
     img: "../../public/assets/Research/Common/TimelineDiversion.png",
     desc: "Increase egg laying rate by 2%",
@@ -384,6 +432,7 @@ const CommonListData = [
     totalCost: "2.864e54",
   },
   {
+    tier: "12",
     name: "Wormhole Dampening",
     img: "../../public/assets/Research/Common/WormholeDampening.png",
     desc: "Increase capacity of portal habs by 2%",
@@ -392,6 +441,7 @@ const CommonListData = [
     totalCost: "5.7162e56",
   },
   {
+    tier: "12",
     name: "Eggsistor Miniaturization",
     img: "../../public/assets/Research/Common/EggsistorMiniaturization.png",
     desc: "Increase egg value by 5%",
@@ -400,6 +450,7 @@ const CommonListData = [
     totalCost: "8.81e48",
   },
   {
+    tier: "12",
     name: "Graviton Coupling",
     img: "../../public/assets/Research/Common/GravitonCoupling.png",
     desc: "Increase max hyperloop train length by 1",
@@ -408,6 +459,7 @@ const CommonListData = [
     totalCost: "1.89056e50",
   },
   {
+    tier: "12",
     name: "Neural Net Refinement",
     img: "../../public/assets/Research/Common/NeuralNetRefinement.png",
     desc: "Increase vehicle speed by 5%",
@@ -416,6 +468,7 @@ const CommonListData = [
     totalCost: "5.232e48",
   },
   {
+    tier: "13",
     name: "Matter Reconfiguration",
     img: "../../public/assets/Research/Common/MatterReconfiguration.png",
     desc: "Increase egg value by 1%",
@@ -424,6 +477,7 @@ const CommonListData = [
     totalCost: "3.4558e51",
   },
   {
+    tier: "13",
     name: "Timeline Splicing",
     img: "../../public/assets/Research/Common/TimelineSplicing.png",
     desc: "10x egg value",
@@ -432,6 +486,7 @@ const CommonListData = [
     totalCost: "1.6564e51",
   },
   {
+    tier: "13",
     name: "Hyper Portalling",
     img: "../../public/assets/Research/Common/HyperPortalling.png",
     desc: "Increase hyperloop car capacity by 5%",
@@ -440,6 +495,7 @@ const CommonListData = [
     totalCost: "3.508e51",
   },
   {
+    tier: "13",
     name: "Relativity Optimization",
     img: "../../public/assets/Research/Common/RelativityOptimization.png",
     desc: "Increase egg laying rate by 10%",

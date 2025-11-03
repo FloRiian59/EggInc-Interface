@@ -13,7 +13,6 @@ const formatDescription = (desc) => {
   return <span dangerouslySetInnerHTML={{ __html: formattedDesc }} />;
 };
 
-// Fonction pour formater les grands nombres avec suffixes
 const formatNumberWithSuffix = (num) => {
   const suffixes = [
     { value: 1e3, symbol: "K" },
@@ -58,22 +57,20 @@ const CommonList = () => {
   );
   const holdTimerRef = useRef([]);
 
-  // Fonction pour calculer le prix actuel
   const getCurrentPrice = (index) => {
     const { basePrice } = CommonListData[index];
     const { current } = upgrades[index];
-    const ratio = 1.2; // Ratio de progression géométrique
+    const ratio = 1.5;
     return parseFloat(basePrice) * Math.pow(ratio, current);
   };
 
-  // Gestion du clic maintenu
   const handleMouseDown = (index) => {
     const newIsHold = [...isHold];
     newIsHold[index] = true;
     setIsHold(newIsHold);
     holdTimerRef.current[index] = setInterval(() => {
       handleBuyUpgrade(index);
-    }, 100); // Achat toutes les 100ms pendant le clic maintenu
+    }, 100);
   };
 
   const handleMouseUp = (index) => {
@@ -83,7 +80,6 @@ const CommonList = () => {
     clearInterval(holdTimerRef.current[index]);
   };
 
-  // Achat d'un upgrade
   const handleBuyUpgrade = (index) => {
     const { totalUpgrades } = CommonListData[index];
     const { current } = upgrades[index];
@@ -95,7 +91,15 @@ const CommonList = () => {
     }
   };
 
-  // Nettoyage des timers
+  const upgradesByTier = CommonListData.reduce((acc, upgrade) => {
+    const tier = upgrade.tier;
+    if (!acc[tier]) {
+      acc[tier] = [];
+    }
+    acc[tier].push(upgrade);
+    return acc;
+  }, {});
+
   useEffect(() => {
     return () => {
       holdTimerRef.current.forEach((timer) => clearInterval(timer));
@@ -104,57 +108,97 @@ const CommonList = () => {
 
   return (
     <div className="upgrade-list">
-      {CommonListData.map((upgrade, index) => (
-        <div key={index} className="upgrade-item">
-          <img src={upgrade.img} alt={upgrade.name} className="upgrade-image" />
-          <div className="upgrade-info">
-            <h3 className="upgrade-name">{upgrade.name}</h3>
-            <p className="upgrade-desc">{formatDescription(upgrade.desc)}</p>
-            <div className="progress-bar-container">
-              <div className="progress-bar-background">
-                <div
-                  className="progress-bar"
-                  style={{
-                    width: `${
-                      (upgrades[index].current /
-                        parseInt(upgrade.totalUpgrades)) *
-                      100
-                    }%`,
-                  }}
-                ></div>
-              </div>
-              <span className="progression">
-                {upgrades[index].current} / {upgrade.totalUpgrades}
-              </span>
-            </div>
+      {/* Boucle sur chaque tier, trié numériquement */}
+      {Object.keys(upgradesByTier)
+        .map(Number) // Convertit les clés en nombres
+        .sort((a, b) => a - b) // Trie par ordre croissant (1, 2, 3, ...)
+        .map((tier) => (
+          <div key={tier} className="tier-container">
+            <h2 className="tier-title">Tier {tier}</h2>
+            <ul className="tier-upgrades">
+              {/* Boucle sur les upgrades du tier actuel */}
+              {upgradesByTier[tier].map((upgrade, upgradeIndex) => {
+                const globalIndex = CommonListData.findIndex(
+                  (u) => u.name === upgrade.name
+                );
+                return (
+                  <li key={upgradeIndex} className="upgrade-item-li">
+                    <div className="upgrade-item">
+                      <div className="upgrade-left">
+                        <img
+                          src={upgrade.img}
+                          alt={upgrade.name}
+                          className="upgrade-image"
+                        />
+                        <div
+                          className={`upgrade-quantity ${
+                            upgrades[globalIndex].current === 0
+                              ? "upgrade-quantity--zero"
+                              : "upgrade-quantity"
+                          }`}
+                        >
+                          <span>x</span> {upgrades[globalIndex].current}
+                        </div>
+                      </div>
+                      <div className="upgrade-info">
+                        <h3 className="upgrade-name">{upgrade.name}</h3>
+                        <p className="upgrade-desc">
+                          {formatDescription(upgrade.desc)}
+                        </p>
+                        <div className="progress-bar-container">
+                          <div className="progress-bar-background">
+                            <div
+                              className="progress-bar"
+                              style={{
+                                width: `${
+                                  (upgrades[globalIndex].current /
+                                    parseInt(upgrade.totalUpgrades)) *
+                                  100
+                                }%`,
+                              }}
+                            ></div>
+                          </div>
+                          <span className="progression">
+                            {upgrades[globalIndex].current} /{" "}
+                            {upgrade.totalUpgrades}
+                          </span>
+                        </div>
+                      </div>
+                      {upgrades[globalIndex].current <
+                      parseInt(upgrade.totalUpgrades) ? (
+                        <div
+                          className="upgrade-price"
+                          onMouseDown={() => handleMouseDown(globalIndex)}
+                          onMouseUp={() => handleMouseUp(globalIndex)}
+                          onMouseLeave={() => handleMouseUp(globalIndex)}
+                          onClick={() => handleBuyUpgrade(globalIndex)}
+                        >
+                          <span>Research</span>
+                          <div className="upgrade-price-container">
+                            <img
+                              src="../../public/assets/Research/Common/Money.png"
+                              alt="Money"
+                              className="upgrade-price-logo"
+                            />
+                            {formatNumberWithSuffix(
+                              getCurrentPrice(globalIndex)
+                            )}
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="upgrade-completed">
+                          <div className="complete-square">
+                            <span>✔</span>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
-          {upgrades[index].current < parseInt(upgrade.totalUpgrades) ? (
-            <div
-              className="upgrade-price"
-              onMouseDown={() => handleMouseDown(index)}
-              onMouseUp={() => handleMouseUp(index)}
-              onMouseLeave={() => handleMouseUp(index)}
-              onClick={() => handleBuyUpgrade(index)}
-            >
-              <span>Research</span>
-              <div className="upgrade-price-container">
-                <img
-                  src="../../public/assets/Research/Common/Money.png"
-                  alt="Money"
-                  className="upgrade-price-logo"
-                />
-                {formatNumberWithSuffix(getCurrentPrice(index))}
-              </div>
-            </div>
-          ) : (
-            <div className="upgrade-completed">
-              <div className="complete-square">
-                <span>✔</span>
-              </div>
-            </div>
-          )}
-        </div>
-      ))}
+        ))}
     </div>
   );
 };
